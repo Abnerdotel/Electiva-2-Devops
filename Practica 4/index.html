@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Estudiantes</h2>
+        <button class="addBtn" id="addStudentBtn">Agregar Estudiante</button>
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Matricula</th>
+                    <th>Nota</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aqui se llena la lista de estudiantes  -->
+            </tbody>
+        </table>
+    </div>
+
+   
+
+    <!-- Modal para agregar/editarel  estudiante -->
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Agregar Estudiante</h2>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Apellido:</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="tuition">Matricula:</label>
+                    <input type="text" id="tuition" name="tuition" required>
+                </div>
+                <div class="form-group">
+                    <label for="grade">Nota:</label>
+                    <input type="text" id="grade" name="grade" required>
+                </div>
+                <button class="saveBtn" type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
