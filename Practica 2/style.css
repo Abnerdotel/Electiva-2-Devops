@@ -1,0 +1,90 @@
+
+*{
+  box-sizing: border-box;
+  
+}
+
+
+.div1{
+text-align: center;
+position: absolute;
+width: 150%;
+top: 0;
+padding: 1px;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 20px;
+  animation: colorChange 15s infinite; 
+  transition: background-color 0.5s;
+}
+
+
+.container {
+  display: flex;
+  width: 95vw;
+  
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  border-radius: 40px;
+  color: #f2ff00;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 5px;
+  position: relative;
+  filter: drop-shadow(1px 1px 5px black );
+  transform: translateY(30px);
+  
+}
+
+.panel h3 {
+
+  font-size: 25px;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  margin: 0;
+  opacity: 0;
+  
+}
+
+.panel.active {
+  flex: 5;
+  transform: translateY(30px);
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+@keyframes colorChange {
+    0% { background-color: #6A89CC; }
+    33% { background-color: #E5E5E5; }
+    66% { background-color: #FF6B6B; }
+    100% { background-color: #6A89CC; }  
+}
